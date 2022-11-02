@@ -18,10 +18,11 @@ class Caltech(VisionDataset):
     def __init__(self, root, split='train', transform=None, target_transform=None):
         super(Caltech, self).__init__(root, transform=transform, target_transform=target_transform)
         
-        path = "/content/Caltech101/"+self.split+".txt"
 
         self.split = split # This defines the split you are going to use
                            # (split files are called 'train.txt' and 'test.txt')
+
+        path = "/content/Caltech101/" + self.split + ".txt"
 
         self.data = list()
         self.labels = set()
